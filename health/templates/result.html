@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinus Symptom Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e7f4e4;
+            border-left: 5px solid #4CAF50;
+        }
+        .result h2 {
+            margin-top: 0;
+        }
+        button {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sinus Symptom Checker Result</h1>
+        <div class="result">
+            <h2>Your sinus infection stage is: <strong>{{ stage }}</strong></h2>
+        </div>
+        <a href="{% url 'symptom_check' %}" class="btn btn-primary">Check Again</a>
+    </div>
+</body>
+</html>
